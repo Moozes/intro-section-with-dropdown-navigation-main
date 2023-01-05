@@ -1,0 +1,95 @@
+@use '../../shared';
+
+$container-width: 80%;
+$container-width-in-px: 1440px * 0.8;
+
+.container {
+    width: $container-width;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px 0;
+    min-height: calc(100vh - 92px);
+    gap: 20px;
+    .left {
+        padding-top: 100px;
+        .title {
+            font-size: 4vmax;
+            color: shared.$almost-black;
+            margin-bottom: 40px;
+        }
+        .text {
+            font-size: calc(23rem / 16);
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        .learn-more {
+            color: shared.$almost-white;
+            background-color: shared.$almost-black;
+            font-size: calc(20rem / 16);
+            padding: 20px 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            margin-bottom: 100px;
+            display: inline-block;
+            font-weight: 700;
+            cursor: pointer;
+            border: 1px solid shared.$almost-black;
+            &:hover {
+                background: white;
+                color: black;
+            }
+        }
+
+        .clients {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    .right {
+        background: url('../../images/image-hero-desktop.png') no-repeat center center;
+        background-size: contain;
+        width: $container-width-in-px * 0.45;
+        height: initial;
+        align-self: stretch;
+        flex-shrink: 0;
+    }
+
+    @media (max-width: calc(1190rem / 16)) {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        .right {
+            order: 1;
+            height: 280px;
+            width: 100%;
+            background-image: url('../../images/image-hero-mobile.png');
+            background-position: center top;
+            background-size: contain;
+        }
+        .left {
+            order: 2;
+            padding: 40px 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title {
+                text-align: center;
+                font-size: 10vmin;
+            }
+            .text {
+                text-align: center;
+            }
+            .learn-more {
+                margin-bottom: 40px;
+            }
+            .clients {
+                flex-wrap: wrap;
+                gap: 0;
+            }
+        }
+    }
+}
