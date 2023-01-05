@@ -17,7 +17,7 @@ export default function HeroSection() {
           
           Streamline processes, create team rituals, and watch productivity soar.
         </p>
-        <a href="#" className={styles['learn-more']}>Learn more</a>
+        <a href="google" className={styles['learn-more']}>Learn more</a>
         <div className={styles.clients}>
           <img src={databiz} alt="databiz client" />
           <img src={audiophile} alt="audio phile client" />
