@@ -1,5 +1,4 @@
 import styles from "./HeroSection.module.scss";
-import hero from "images/image-hero-desktop.png";
 import audiophile from "images/client-audiophile.svg";
 import databiz from "images/client-databiz.svg";
 import maker from "images/client-maker.svg";
